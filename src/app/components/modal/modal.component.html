@@ -1,0 +1,11 @@
+<div class="layer" (click)="modalService.close()">
+
+</div>    
+<div class="window">
+    <button class="close" (click)="modalService.close()">&times;</button>
+    <h2 class="title">{{ title | titlecase }}</h2>
+    <div class="content">
+        <ng-content></ng-content>
+    </div>
+</div>
+

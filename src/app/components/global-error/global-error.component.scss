@@ -1,0 +1,26 @@
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 50px;
+    color: white;
+    background-color: red;
+}
+
+.close {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    margin: 0;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    color: white;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 24px;
+    line-height: 1;
+    transform: translateY(-50%)
+}

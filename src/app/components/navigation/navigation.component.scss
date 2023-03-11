@@ -1,0 +1,29 @@
+.nav-bar {
+    position: fixed;
+    top: 0;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 50px;
+    background-color: rgb(40, 124, 183);
+    z-index: 99;
+}
+
+.nav-list {
+    display: flex;
+    margin: 0;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-item:not(:last-child) {
+    margin-right: 20px;
+}
+
+.nav-link {
+    font-size: 16px;
+    color: white;
+    // cursor: pointer;
+}

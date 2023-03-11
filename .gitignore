@@ -1,0 +1,22 @@
+# Logs #
+/logs
+*.log
+*.log*
+
+# Configs #
+
+# Node files #
+node_modules
+npm-debug.log
+yarn-error.log
+lerna-debug.log
+
+# Dist #
+dist
+.angular
+
+# IDE #
+.vscode
+.idea
+*.swp
+.awcache
