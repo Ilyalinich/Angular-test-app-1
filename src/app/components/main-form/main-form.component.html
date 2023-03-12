@@ -1,0 +1,58 @@
+<h2>Address form</h2>
+
+<form class="main-form" (ngSubmit)="onSubmit()" #mainForm="ngForm">
+    <div class="row">
+        <div class="col">
+            <mat-form-field class="full-width">
+                <mat-label>firstname</mat-label>
+                <input matInput type="text" [(ngModel)]="address.firstName" name="firstname">
+                <button *ngIf="address.firstName" matSuffix mat-icon-button aria-label="Clear" (click)="address.firstName=''">
+                  <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+        <div class="col">
+            <mat-form-field class="full-width">
+                <mat-label>lastname</mat-label>
+                <input matInput type="text" [(ngModel)]="address.lastName" name="lastname">
+                <button *ngIf="address.lastName" matSuffix mat-icon-button aria-label="Clear" (click)="address.lastName=''">
+                  <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+    </div>
+    <mat-form-field class="full-width">
+        <textarea matInput placeholder="Address" [(ngModel)]="address.address" name="address"></textarea>
+    </mat-form-field>
+    <div class="row">
+        <div class="col">
+            <mat-form-field class="full-width">
+                <mat-label>city</mat-label>
+                <input matInput type="text" [(ngModel)]="address.city" name="city">
+                <button *ngIf="address.city" matSuffix mat-icon-button aria-label="Clear" (click)="address.city=''">
+                  <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+        <div class="col">
+            <mat-form-field class="full-width">
+                <mat-label>state</mat-label>
+                <input matInput type="text" [(ngModel)]="address.state" name="state">
+                <button *ngIf="address.state" matSuffix mat-icon-button aria-label="Clear" (click)="address.state=''">
+                  <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+        <div class="col">
+            <mat-form-field class="full-width">
+                <mat-label>postal code</mat-label>
+                <input matInput type="text" maxlength="5" #postalcode [(ngModel)]="address.postalcode" name="postalcode">
+                <mat-hint align="end">{{ postalcode.value.length }} / 5</mat-hint>
+                <button *ngIf="address.postalcode" matSuffix mat-icon-button aria-label="Clear" (click)="address.postalcode=''">
+                  <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+    </div>
+    <button mat-raised-button type="submit" class="submit">Submit</button>
+</form>
